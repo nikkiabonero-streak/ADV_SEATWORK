@@ -1,0 +1,129 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Arial, sans-serif;
+
+  background-image: url("https://i.pinimg.com/736x/6b/6e/65/6b6e65ab4b16bbcd7f10d6c473b185c9.jpg");
+  background-size: cover;         
+  background-position: center;     
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.app {
+  width: 100%;
+  max-width: 380px;
+  padding: 15px;
+}
+
+
+.card {
+  background: #ff48485b;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(255, 239, 21, 0.747);
+  animation: slideUp 0.8s ease;
+}
+
+
+h1 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.subtitle {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid #ddd;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #667eea;
+  transform: scale(1.04);
+}
+
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 15px rgb(255, 255, 255);
+}
+
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0;
+}
+
+
+.show {
+  animation: fadePop 0.6s ease forwards;
+}
+
+
+.footer {
+  text-align: center;
+  color: #eee;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
+@keyframes fadePop {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
